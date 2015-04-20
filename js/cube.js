@@ -6,7 +6,7 @@ var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 var geometry = new THREE.CubeGeometry( 1, 1, 1 );
-var material = new THREE.MeshBasicMaterial( { color: "#6495ED" } );
+var material = new THREE.MeshLambertMaterial( { color: "#6495ED" } );
 var cube = new THREE.Mesh( geometry, material );
 scene.add(cube); //by default added to coordinates (0,0,0)
 camera.position.z = 5;
