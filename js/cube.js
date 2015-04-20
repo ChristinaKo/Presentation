@@ -9,7 +9,7 @@ var geometry = new THREE.CubeGeometry( 1, 1, 1 );
 var material = new THREE.MeshBasicMaterial( { color: "#6495ED" } );
 var cube = new THREE.Mesh( geometry, material );
 scene.add(cube); //by default added to coordinates (0,0,0)
-//camera.position.z = 5;
+camera.position.z = 5;
 function render() {
     requestAnimationFrame(render);
     cube.rotation.x += 0.01;
