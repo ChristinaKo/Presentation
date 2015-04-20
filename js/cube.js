@@ -5,15 +5,15 @@ var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHe
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
-var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+var geometry = new THREE.CubeGeometry( 1, 1, 1 );
 var material = new THREE.MeshBasicMaterial( { color: "#6495ED" } );
 var cube = new THREE.Mesh( geometry, material );
 scene.add(cube); //by default added to coordinates (0,0,0)
 camera.position.z = 5;
 function render() {
     requestAnimationFrame(render);
-    cube.rotation.x += 0.5;
-    cube.rotation.y += 0.5;
+    cube.rotation.x += 0.1;
+    cube.rotation.y += 0.1;
     renderer.render( scene, camera );
 }
 render();
