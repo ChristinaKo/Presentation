@@ -12,8 +12,8 @@ scene.add(cube); //by default added to coordinates (0,0,0)
 camera.position.z = 5;
 function render() {
     requestAnimationFrame(render);
-    cube.rotation.x += 0.1;
-    cube.rotation.y += 0.1;
+    cube.rotation.x += 0.5;
+    cube.rotation.y += 0.5;
     renderer.render( scene, camera );
 }
 render();
